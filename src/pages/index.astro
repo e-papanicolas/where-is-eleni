@@ -1,26 +1,24 @@
 ---
 import Layout from "../layouts/Layout.astro";
----
+import { getContent } from "../utils/i18n";
 
-<Layout title="Where is Eleni?">
-	<main id="app">
-    <h1>Where is Eleni?</h1>
-    
-		<p class="subtitle">
-      Follow along on my travel journey.
+const params = Astro.params;
+const lang = params.lang || "en";
+const content = getContent(lang, "home");
+---
+<Layout title={content.metaTitle}>
+  <main id="app">
+    <h1 class="animate">{content.title}</h1>
+      
+    <p class="subtitle">
+      {content.subtitle}
     </p>
+    <form>
+      <input type="password" />
+      <button>{content.launchButtonText}</button>
+    </form>
   </main>
 </Layout>
 
-<style is:global>
-  #app {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 2rem;
-      text-align: center;
-    }
-  .subtitle {
-    font-size: 1.25em;
-    font-weight: 300;
-  }
-</style>
+<script src="animejs/lib/anime.min.js"></script>
+<script src="../utils/homepageAnimationScript.ts"></script>

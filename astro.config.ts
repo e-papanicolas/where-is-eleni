@@ -11,4 +11,8 @@ export default defineConfig({
   },
   integrations: [qwik({ include: ["**/components/**/*"] })],
   adapter: netlify(),
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en", "el"],
+  },
 });

@@ -1,0 +1,30 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getContent } from "../../utils/i18n";
+
+const params = Astro.params;
+const lang = params.lang || "el";
+const content = getContent(lang, "home");
+---
+<Layout title={content.metaTitle}>
+  <main id="app">
+    <h1 class="animate gr-h">{content.title}</h1>
+      
+    <p class="subtitle gr">
+      {content.subtitle}
+    </p>
+    <form>
+      <input type="password" />
+      <button class="pswd gr">{content.launchButtonText}</button>
+    </form>
+  </main>
+</Layout>
+
+<script src="animejs/lib/anime.min.js"></script>
+<script src="../../utils/homepageAnimationScript.ts"></script>
+
+<style>
+    .subtitle {
+        font-size: 1.5rem;
+    }
+</style>

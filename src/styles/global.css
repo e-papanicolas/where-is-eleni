@@ -13,6 +13,37 @@ body {
     place-items: center;
     min-width: 320px;
     min-height: 100vh;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.gr {
+    font-family: 'Advent Pro', sans-serif;
+}
+
+.gr-h {
+    font-family: 'Mansalva';
+}
+
+#app {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 1.25em;
+    font-weight: 300;
+}
+
+.animate {
+    font-weight: 900;
+    font-size: 3.5em;
+}
+
+.animate .letter {
+    display: inline-block;
+    line-height: 1em;
 }
 
 h1 {

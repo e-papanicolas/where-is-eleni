@@ -19,15 +19,17 @@
     "start": "astro dev --open"
   },
   "dependencies": {
-    "@astrojs/check": "^0.7.0",
-    "@astrojs/netlify": "^5.2.1",
+    "@astrojs/check": "0.8.1",
+    "@astrojs/netlify": "5.4.0",
     "@builder.io/qwik": "^1.5.5",
     "@qwikdev/astro": "^0.5.15",
-    "astro": "^4.9.2",
+    "animejs": "^3.2.2",
+    "astro": "4.11.5",
     "rimraf": "^5.0.7",
     "typescript": "^5.4.5"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.6.3"
+    "@biomejs/biome": "^1.6.3",
+    "@types/animejs": "^3.1.12"
   }
 }
